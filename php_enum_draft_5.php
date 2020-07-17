@@ -91,8 +91,7 @@ namespace fago\lab
      */
     public static final function valueOrDefault(string $symbol,Enum $defaultValue):Enum
     {
-        $maybeFound = static::findSymbol($symbol);
-        return $maybeFound===null?$defaultValue:$maybeFound;
+        return static::findSymbol($symbol)??$defaultValue;
     }
     
     /**
